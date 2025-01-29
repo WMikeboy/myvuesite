@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>徳島旅</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background-color: #f0f0f0;
+                overflow: hidden;
+            }
+            .container {
+                display: flex;
+                width: 100vw;
+                height: 100vh;
+            }
+            .card {
+                flex: 0.4;
+                height: 100%;
+                margin: 0;
+                border-radius: 0;
+                cursor: pointer;
+                transition: flex 0.5s ease-in-out;
+                position: relative;
+                background-size: contain; /* 让图片完整显示 */
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .card.active {
+                flex: 9;
+            }
+            .card h3 {
+                position: absolute;
+                bottom: 20px;
+                left: 20px;
+                color: white;
+                font-size: 24px;
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out;
+            }
+            .card.active h3 {
+                opacity: 1;
+            }
+        </style>
+    </head>
+<body>
+    <div class="container">
+        <div class="card" style="background-image: url('https://www.his-j.com/kokunai/kanto/tour_info/okinawa/catchy/wp-content/uploads/2024/02/tokushima_map_AdobeStock_318766016_575911123.jpg');"></div>
+        <div class="card" style="background-image: url('https://github.com/WMikeboy/myvuesite/blob/main/timetable.png?raw=true');"></div>
+        <div class="card" style="background-image: url('https://github.com/WMikeboy/myvuesite/blob/main/train.png?raw=true');"></div>
+        <div class="card" style="background-image: url('https://github.com/WMikeboy/myvuesite/blob/main/freetime.png?raw=true');"></div>
+        <div class="card" style="background-image: url('https://github.com/WMikeboy/myvuesite/blob/main/%E3%83%AC%E3%82%B9%E3%83%88%E3%83%A9%E3%83%B3.png?raw=true');"></div>
+        <div class="card" style="background-image: url('https://github.com/WMikeboy/myvuesite/blob/main/lunch.png?raw=true');"></div>
+        <div class="card" style="background-image: url('https://www.uzunomichi.jp/wp-content/uploads/2024/05/f377af500043843ab4773cdde2397150.jpg');"></div>
+        <div class="card" style="background-image: url('https://github.com/WMikeboy/myvuesite/blob/main/naruto.png?raw=true');"></div>
+        <div class="card" style="background-image: url('https://github.com/WMikeboy/myvuesite/blob/main/dinner.png?raw=true');"></div>
+        <div class="card" style="background-image: url('https://github.com/WMikeboy/myvuesite/blob/main/%E5%BE%B3%E5%B3%B6%E4%B8%AD%E5%A4%AE%E5%85%AC%E5%9C%92.png?raw=true');"></div>
+    </div>
+    <script>
+        const cards = document.querySelectorAll('.card');
+        
+        function removeActiveClasses() {
+            cards.forEach(card => card.classList.remove('active'));
+        }
+
+        function updateActiveCard(index) {
+            removeActiveClasses();
+            cards[index].classList.add('active');
+        }
+
+        cards.forEach((card, index) => {
+            card.addEventListener('click', () => {
+                updateActiveCard(index);
+            });
+        });
+
+        let currentIndex = 0;
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'ArrowRight') {
+                currentIndex = (currentIndex + 1) % cards.length;
+            } else if (event.key === 'ArrowLeft') {
+                currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+            } else {
+                return;
+            }
+            updateActiveCard(currentIndex);
+        });
+
+        // 初始选中第一个卡片
+        updateActiveCard(currentIndex);
+    </script>
+</body>
+</html>
