@@ -334,7 +334,7 @@ const setLanguage = (lang) => {
     });
 };
 
-const initialLang = localStorage.getItem("wm-lang") || "zh";
+const initialLang = localStorage.getItem("wm-lang") || "ja";
 setLanguage(initialLang);
 
 langButtons.forEach((btn) => {
