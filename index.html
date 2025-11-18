@@ -1,1 +1,269 @@
-<!doctype html><html lang=""><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/myvuesite/favicon.ico"><title>myvuesite</title><script defer="defer" src="/myvuesite/js/chunk-vendors.b6f9f761.js"></script><script defer="defer" src="/myvuesite/js/app.80f9eab6.js"></script><link href="/myvuesite/css/app.ed67457e.css" rel="stylesheet"></head><body><div id="app"></div><script src="/myvuesite/script.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="meta.title">WMikeboy｜GitHub 個人履歷</title>
+    <meta name="description" content="WMikeboy 的個人履歷網站，包含經歷、技能、專案與聯絡方式。" data-i18n="meta.description" data-i18n-attr="content" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <header class="hero" id="top">
+        <nav class="nav">
+            <a class="brand" href="#top" data-i18n="brand.name">WMikeboy</a>
+            <div class="nav__links">
+                <a href="#about" data-i18n="nav.about">關於我</a>
+                <a href="#experience" data-i18n="nav.experience">經歷</a>
+                <a href="#github" data-i18n="nav.github">GitHub</a>
+                <a href="#skills" data-i18n="nav.skills">技能</a>
+                <a href="#projects" data-i18n="nav.projects">專案</a>
+                <a href="#contact" data-i18n="nav.contact">聯絡</a>
+            </div>
+            <div class="nav__actions">
+                <div class="lang-switcher" role="group" aria-label="Language switcher">
+                    <button class="lang-switcher__btn active" data-lang="zh">中文</button>
+                    <button class="lang-switcher__btn" data-lang="en">English</button>
+                    <button class="lang-switcher__btn" data-lang="ja">日本語</button>
+                </div>
+                <button class="nav__toggle" aria-label="開啟導覽選單" data-i18n="nav.toggle" data-i18n-attr="aria-label">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+        <div class="hero__content">
+            <p class="eyebrow" data-i18n="hero.eyebrow">GitHub 創作者 · 前端學習者</p>
+            <h1>WMikeboy</h1>
+            <p class="lead" data-i18n="hero.lead">熱衷透過 Vue、GitHub Pages 與 TypeScript 實作各式小專案，將學習筆記直接部署成可分享的作品。</p>
+            <div class="hero__actions">
+                <a class="btn primary" href="#projects" data-i18n="hero.cta.primary">查看作品</a>
+                <a class="btn ghost" href="https://github.com/WMikeboy" target="_blank" rel="noreferrer" data-i18n="hero.cta.secondary">GitHub</a>
+            </div>
+            <ul class="hero__meta">
+                <li>
+                    <span class="label" data-i18n="hero.meta.repos.label">公開 Repo</span>
+                    <span data-i18n="hero.meta.repos.value">3（HTML / TypeScript）</span>
+                </li>
+                <li>
+                    <span class="label" data-i18n="hero.meta.updated.label">最近更新</span>
+                    <span data-i18n="hero.meta.updated.value">myvuesite · 2025-11</span>
+                </li>
+                <li>
+                    <span class="label" data-i18n="hero.meta.joined.label">加入 GitHub</span>
+                    <span data-i18n="hero.meta.joined.value">2022-04-05</span>
+                </li>
+            </ul>
+        </div>
+        <div class="hero__image" aria-hidden="true"></div>
+    </header>
+
+    <main>
+        <section class="section about" id="about">
+            <div class="section__header">
+                <p class="eyebrow" data-i18n="about.eyebrow">ABOUT</p>
+                <h2 data-i18n="about.heading">關於我</h2>
+                <p data-i18n="about.description">目前透過 GitHub 建立前端玩具專案，從靜態網站到行動介面皆親手完成。喜歡把想法快速轉成可部署的作品，並將每次實驗寫入 repo 版本歷史。</p>
+            </div>
+            <div class="about__grid">
+                <article>
+                    <h3 data-i18n="about.value.title">我能帶來的價值</h3>
+                    <ul>
+                        <li data-i18n="about.value.item1">使用 Vue / 原生 HTML 建立快速可線上展示的頁面</li>
+                        <li data-i18n="about.value.item2">結合 GitHub Actions 與 Pages 進行自動化部署</li>
+                        <li data-i18n="about.value.item3">在 repo 中留下清楚的變更紀錄，方便追蹤迭代脈絡</li>
+                    </ul>
+                </article>
+                <article>
+                    <h3 data-i18n="about.focus.title">近期練習方向</h3>
+                    <ul>
+                        <li data-i18n="about.focus.item1">Vue 介面模組化與設計系統雛形</li>
+                        <li data-i18n="about.focus.item2">GitHub Pages 靜態部署</li>
+                        <li data-i18n="about.focus.item3">TypeScript + Capacitor 行動應用雛形</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="section experience" id="experience">
+            <div class="section__header">
+                <p class="eyebrow" data-i18n="experience.eyebrow">EXPERIENCE</p>
+                <h2 data-i18n="experience.heading">學習里程</h2>
+            </div>
+            <div class="timeline">
+                <article class="timeline__item">
+                    <span class="timeline__period" data-i18n="experience.timeline1.period">2025.11 - 現在</span>
+                    <h3 data-i18n="experience.timeline1.title">myvuesite｜作品總集</h3>
+                    <p data-i18n="experience.timeline1.desc">這個 repo 保存了本頁面與其他前端練習，重點在於掌握語意化 HTML 與響應式排版。</p>
+                </article>
+                <article class="timeline__item">
+                    <span class="timeline__period" data-i18n="experience.timeline2.period">2025.08</span>
+                    <h3 data-i18n="experience.timeline2.title">mobile｜TypeScript Prototype</h3>
+                    <p data-i18n="experience.timeline2.desc">運用 TypeScript 製作行動介面的 UI 元件，練習模組化結構與跨平台輸出。</p>
+                </article>
+                <article class="timeline__item">
+                    <span class="timeline__period" data-i18n="experience.timeline3.period">2025.05</span>
+                    <h3 data-i18n="experience.timeline3.title">Mygitpagesite｜GitHub Pages</h3>
+                    <p data-i18n="experience.timeline3.desc">設定 GitHub Pages pipeline，嘗試把最小靜態網頁部署到公開網址。</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section stats" id="github">
+            <div class="section__header">
+                <p class="eyebrow" data-i18n="stats.eyebrow">GITHUB</p>
+                <h2 data-i18n="stats.heading">帳號快照</h2>
+                <p class="stats__note">
+                    <span data-i18n="stats.description.prefix">依據 </span>
+                    <a href="https://github.com/WMikeboy" target="_blank" rel="noreferrer" data-i18n="stats.link">github.com/WMikeboy</a>
+                    <span data-i18n="stats.description.suffix"> 公開資料更新（2025-11-18）。</span>
+                </p>
+            </div>
+            <div class="stats__grid">
+                <article class="stat-card">
+                    <span class="stat-card__label" data-i18n="stats.card.repos.label">公開 Repo</span>
+                    <strong data-i18n="stats.card.repos.value">3</strong>
+                    <p data-i18n="stats.card.repos.detail">myvuesite · Mygitpagesite · mobile</p>
+                </article>
+                <article class="stat-card">
+                    <span class="stat-card__label" data-i18n="stats.card.langs.label">主要語言</span>
+                    <strong data-i18n="stats.card.langs.value">HTML · TypeScript</strong>
+                    <p data-i18n="stats.card.langs.detail">著重前端介面與行動開發練習。</p>
+                </article>
+                <article class="stat-card">
+                    <span class="stat-card__label" data-i18n="stats.card.follow.label">Followers / Following</span>
+                    <strong data-i18n="stats.card.follow.value">0 / 1</strong>
+                    <p data-i18n="stats.card.follow.detail">持續追蹤前端相關帳號，吸收新技巧。</p>
+                </article>
+                <article class="stat-card">
+                    <span class="stat-card__label" data-i18n="stats.card.joined.label">加入年份</span>
+                    <strong data-i18n="stats.card.joined.value">2022</strong>
+                    <p data-i18n="stats.card.joined.detail">自 2022 起在 GitHub 累積開源學習歷程。</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section skills" id="skills">
+            <div class="section__header">
+                <p class="eyebrow" data-i18n="skills.eyebrow">SKILLS</p>
+                <h2 data-i18n="skills.heading">技能矩陣</h2>
+            </div>
+            <div class="skills__grid">
+                <article>
+                    <h3 data-i18n="skills.section.product">產品與設計</h3>
+                    <div class="skill" data-skill="90">
+                        <span data-i18n="skills.product.strategy">產品策略</span>
+                        <div class="bar"><span></span></div>
+                    </div>
+                    <div class="skill" data-skill="85">
+                        <span data-i18n="skills.product.uxui">UX / UI 設計</span>
+                        <div class="bar"><span></span></div>
+                    </div>
+                    <div class="skill" data-skill="75">
+                        <span data-i18n="skills.product.system">Design System</span>
+                        <div class="bar"><span></span></div>
+                    </div>
+                </article>
+                <article>
+                    <h3 data-i18n="skills.section.tech">技術</h3>
+                    <div class="skill" data-skill="80">
+                        <span data-i18n="skills.tech.frontend">Vue / React</span>
+                        <div class="bar"><span></span></div>
+                    </div>
+                    <div class="skill" data-skill="70">
+                        <span data-i18n="skills.tech.ts">TypeScript</span>
+                        <div class="bar"><span></span></div>
+                    </div>
+                    <div class="skill" data-skill="65">
+                        <span data-i18n="skills.tech.api">Node / API</span>
+                        <div class="bar"><span></span></div>
+                    </div>
+                </article>
+                <article>
+                    <h3 data-i18n="skills.section.tools">工具</h3>
+                    <ul class="tag-list">
+                        <li>Figma</li>
+                        <li>Framer</li>
+                        <li>Notion</li>
+                        <li>Jira</li>
+                        <li>GSuite</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="section projects" id="projects">
+            <div class="section__header">
+                <p class="eyebrow" data-i18n="projects.eyebrow">PROJECTS</p>
+                <h2 data-i18n="projects.heading">精選專案</h2>
+            </div>
+            <div class="projects__grid">
+                <article>
+                    <div class="pill" data-i18n="projects.item1.tag">HTML · CSS</div>
+                    <h3>myvuesite</h3>
+                    <p data-i18n="projects.item1.desc">完整的個人介紹網站範本，持續迭代內容與樣式，練習響應式版型。</p>
+                    <a href="https://github.com/WMikeboy/myvuesite" target="_blank" rel="noreferrer" class="text-link" data-i18n="projects.item1.link">前往 Repo →</a>
+                </article>
+                <article>
+                    <div class="pill" data-i18n="projects.item2.tag">GitHub Pages</div>
+                    <h3>Mygitpagesite</h3>
+                    <p data-i18n="projects.item2.desc">使用 GitHub Pages 發布的極簡著陸頁，專注在部署流程與資源最小化。</p>
+                    <a href="https://github.com/WMikeboy/Mygitpagesite" target="_blank" rel="noreferrer" class="text-link" data-i18n="projects.item2.link">查看原始碼 →</a>
+                </article>
+                <article>
+                    <div class="pill" data-i18n="projects.item3.tag">TypeScript</div>
+                    <h3>mobile</h3>
+                    <p data-i18n="projects.item3.desc">行動 UI 元件實驗室，嘗試將 TypeScript 與行動框架整合，打造快速互動。</p>
+                    <a href="https://github.com/WMikeboy/mobile" target="_blank" rel="noreferrer" class="text-link" data-i18n="projects.item3.link">閱讀筆記 →</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="section contact" id="contact">
+            <div class="contact__card">
+                <div>
+                    <p class="eyebrow" data-i18n="contact.eyebrow">CONTACT</p>
+                    <h2 data-i18n="contact.heading">一起打造下一個體驗</h2>
+                    <p data-i18n="contact.description">若你正在尋找能一起實驗前端技術或部署流程的夥伴，歡迎在 GitHub 或 email 上聯絡。</p>
+                    <ul class="contact__info">
+                        <li>
+                            <span data-i18n="contact.info.email.label">Email</span>
+                            <span class="contact__separator" data-i18n="contact.info.separator">：</span>
+                            <a href="mailto:mike@example.com">mike@example.com</a>
+                        </li>
+                        <li>
+                            <span data-i18n="contact.info.github.label">GitHub</span>
+                            <span class="contact__separator" data-i18n="contact.info.separator">：</span>
+                            <a href="https://github.com/WMikeboy" target="_blank" rel="noreferrer">@WMikeboy</a>
+                        </li>
+                    </ul>
+                </div>
+                <form class="contact__form">
+                    <label>
+                        <span data-i18n="contact.form.name.label">您的名字</span>
+                        <input type="text" placeholder="例如：王小明" required data-i18n="contact.form.name.placeholder" data-i18n-attr="placeholder" />
+                    </label>
+                    <label>
+                        <span data-i18n="contact.form.email.label">聯絡 Email</span>
+                        <input type="email" placeholder="you@email.com" required data-i18n="contact.form.email.placeholder" data-i18n-attr="placeholder" />
+                    </label>
+                    <label>
+                        <span data-i18n="contact.form.message.label">訊息</span>
+                        <textarea rows="4" placeholder="想合作的內容或想聊的主題" data-i18n="contact.form.message.placeholder" data-i18n-attr="placeholder"></textarea>
+                    </label>
+                    <button type="submit" class="btn primary" data-i18n="contact.form.button">送出訊息</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© <span id="year"></span> <span data-i18n="footer.copy">WMikeboy · Powered by GitHub Pages.</span></p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
